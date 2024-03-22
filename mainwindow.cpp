@@ -64,11 +64,11 @@ void MainWindow::SetDataReply(QString replyString)
 void MainWindow::DisplayStat(StatServer stat)
 {
     ui->tb_result->append("Статус сервера: ");
-    ui->tb_result->append("Количество подключённых клиентов: " + stat.clients);
-    ui->tb_result->append("Количество принятых байт: " + stat.incBytes);
-    ui->tb_result->append("Количество переданных байт: " + stat.sendBytes);
-    ui->tb_result->append("Количество переданных пакетов: " + stat.sendPck);
-    ui->tb_result->append("Время работы сервера, сек: " + stat.workTime);
+    ui->tb_result->append("Количество подключённых клиентов: " + QString::number(stat.clients));
+    ui->tb_result->append("Количество принятых байт: " + QString::number(stat.incBytes));
+    ui->tb_result->append("Количество переданных байт: " + QString::number(stat.sendBytes));
+    ui->tb_result->append("Количество переданных пакетов: " + QString::number(stat.sendPck));
+    ui->tb_result->append("Время работы сервера, сек: " + QString::number(stat.workTime));
 }
 void MainWindow::DisplayError(uint16_t error)
 {
